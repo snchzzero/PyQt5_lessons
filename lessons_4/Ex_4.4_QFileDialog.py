@@ -29,7 +29,8 @@ class Example(QMainWindow):
     def showDialog(self):
         fname = QFileDialog.getOpenFileNames(self, 'Open File', '/home')[0]
 
-        with open(fname, 'r') as f:
+
+        with open(fname[0], 'r') as f:
             data = f.read()
             self.textEdit.setText(data)
 
